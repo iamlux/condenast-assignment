@@ -1,33 +1,289 @@
-.App {
+/* Header Section */
+.condenast {
+  margin: 12px;
+}
+
+.condenast .condenast_header {
+  display: inline-block;
+  width: 100%;
+  background-image: url("./assets/images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 23px 40px;
+}
+
+.condenast .condenast_header .condenast_header_logo {
+  width: 30%;
+  float: left;
+}
+
+.condenast .condenast_header .condenast_header_logo .img_logo {
+  width: 150px;
+  margin: 10px 0;
+}
+
+.condenast .condenast_header .condenast_header_logo .header_text {
+  color: #fff;
+  font-size: 40px;
+  font-family: OpinionProExtended-Regular;
+}
+
+.condenast .condenast_header .condenast_header_time {
+  width: 30%;
+  float: left;
+}
+
+.condenast .condenast_header .condenast_header_time .condenast_header_time--wrap {
+  display: inline-block;
+  background-color: #2a3042;
+  padding: 20px;
+  border-radius: 6px;
+  opacity: 0.9;
+}
+
+.condenast .condenast_header .condenast_header_time .condenast_header_time--wrap .update_name {
+  padding: 0 28px 0 10px;
+  color: #888da3;
+  font-size: 18px;
+}
+
+.condenast .condenast_header .condenast_header_time .condenast_header_time--wrap .update_datetime {
+  color: #dbdbdb;
+  font-size: 21px;
+}
+
+.condenast .condenast_header .condenast_header_label {
+  width: 30%;
+  float: right;
+  color: #fff;
+  font-size: 16px;
+}
+
+.condenast .condenast_header .condenast_header_label ul li {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  color: #888DA4;
+}
+
+.condenast .condenast_header .condenast_header_label ul li .round_type {
+  margin-left: 7px;
+}
+
+.condenast_header_label ul {
+  width: 50%;
+  float: left;
+}
+
+/* Body Section */
+.container {
+  color: #fff;
+  /* max-width: 1020px; */
+  width: 100%;
+  background: #272936;
+}
+
+.container section {
+  padding: 40px;
+  display: flex;
+  align-items: start;
+}
+
+.container section .listof-section h3 {
+  font-size: 25px;
+  color: #888DA4;
+  padding: 10px 0;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.container section .listof-section {
+  margin-right: 18px;
+  width: 33%;
+}
+
+.container section .listof-section:last-child {
+  margin: 0;
+}
+
+.container section .listof-section h3:after {
+  height: 2px;
+  position: absolute;
+  background: linear-gradient(to right, #505467, #292c3e);
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  content: "";
+  right: 0;
+}
+
+.container section .listof-section .data-status h4 {
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #E5E5E6;
+  background: #2B3042;
+  text-transform: capitalize;
+}
+
+.container section .listof-section .data-status ul {
+  display: flex;
+  padding: 10px 20px 15px;
+  background: #131D29;
+}
+
+.container section .listof-section .data-status ul li.complete a {
+  background: #55BD4F;
+}
+
+.container section .listof-section .data-status ul li a {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  box-shadow: 0px 1px 5px #000;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 8px;
+}
+
+.container section .listof-section .data-status ul li span {
+  font-size: 13px;
+  color: #888DA4;
+}
+
+.container section .listof-section .data-status ul li {
+  margin-right: 14px;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.container section .listof-section .data-status ul li:last-child {
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container section .listof-section .data-status ul li.no-update a {
+  border: 1px solid #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.container section .listof-section .data-status ul li.noload a {
+  background: #FF4A33;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.container section .listof-section .data-status ul li.complete.star-ic span {
+  color: #fff;
+  font-weight: 600;
+}
+
+.container section .listof-section .data-status {
+  margin: 20px 0;
+}
+
+.container section .listof-section .data-status ul li.complete.star-ic a {
+  box-shadow: 0px 5px 6px #000;
+}
+
+.container section .listof-section .data-status ul li.star-ic a svg {
+  width: 14px;
+  height: 14px;
+  fill: #182535;
+}
+
+.container section .listof-section .data-status ul li.star-ic a span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 3px;
+}
+
+.container section .listof-section .data-status ul li.qualityalert a {
+  background: #FFDE2A;
+}
+
+.container section .listof-section .data-status ul li.partialload a {
+  background: #FFB337;
+}
+.container section .listof-section .data-status ul li.schedule a {
+      border: 2px solid white;
+}
+@media (max-width:1199px) {
+  .container section {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  .container section .listof-section {
+    margin: 0 10px 30px;
+    width: 47%;
+    float: left;
+  }
+
+  .container section .listof-section .data-status ul li {
+    flex: 1;
+  }
+
+  .condenast .condenast_header .condenast_header_label {
+    width: 40%;
+    float: left;
+  }
+
+  .condenast .condenast_header .condenast_header_time {
+    width: 30%;
+    float: left;
+  }
+
+  .condenast .condenast_header .condenast_header_logo {
+    width: 30%;
+    float: left;
+  }
+}
+
+@media(max-width: 910px) {
+  .container section .listof-section {
+    width: 100%;
+  }
+}
+
+@media(max-width: 1180px) {
+  .container section .listof-section {
+    width: 100%;
+  }
+
+  .condenast .condenast_header .condenast_header_logo .img_logo {
+    width: 150px;
+    margin: 9px auto;
+  }
+
+  .condenast .condenast_header .condenast_header_logo {
+    width: 100%;
+    text-align: center;
+    padding: 17px;
+  }
+
+  .condenast .condenast_header .condenast_header_label {
+    width: 50%;
+  }
+
+  .condenast .condenast_header .condenast_header_time {
+    width: 50%;
+  }
+}
+
+@media(max-width: 750px) {
+  .condenast .condenast_header .condenast_header_logo {
+    width: 100%;
+    text-align: center;
+    padding: 17px;
+  }
+
+  .condenast .condenast_header .condenast_header_label {
+    width: 44%;
+    float: none;
+    margin: 0 auto;
+  }
+
+  .condenast .condenast_header .condenast_header_time {
+    width: 100%;
+    text-align: center;
+    padding: 17px;
   }
 }
