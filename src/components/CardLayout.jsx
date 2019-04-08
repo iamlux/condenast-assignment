@@ -9,7 +9,7 @@ class CardLayout extends Component {
 
   renderCards() {
     return this.props.data.map((val, index) => {
-      return <Card data={val}/>
+      return <Card key={index} data={val}/>
     });
   }
 

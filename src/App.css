@@ -6,10 +6,10 @@
 .condenast .condenast_header {
   display: inline-block;
   width: 100%;
-  background-image: url("./assets/images/background.png");
+  background-image: url('./assets/images/background.png');
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 23px 40px;
+  padding: 0px 40px 20px;
 }
 
 .condenast .condenast_header .condenast_header_logo {
@@ -24,7 +24,7 @@
 
 .condenast .condenast_header .condenast_header_logo .header_text {
   color: #fff;
-  font-size: 40px;
+  font-size: 30px;
   font-family: OpinionProExtended-Regular;
 }
 
@@ -61,8 +61,10 @@
 
 .condenast .condenast_header .condenast_header_label ul li {
   margin: 10px;
+  display: -webkit-flex;
   display: flex;
-  align-items: center;
+  -webkit-align-items: center;
+          align-items: center;
   color: #888DA4;
 }
 
@@ -85,7 +87,10 @@
 
 .container section {
   padding: 40px;
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-items: start;
+  flex-wrap: wrap;
   align-items: start;
 }
 
@@ -98,8 +103,8 @@
 }
 
 .container section .listof-section {
-  margin-right: 18px;
-  width: 33%;
+  margin-right: 2%;
+  flex: 1;
 }
 
 .container section .listof-section:last-child {
@@ -127,6 +132,7 @@
 }
 
 .container section .listof-section .data-status ul {
+  display: -webkit-flex;
   display: flex;
   padding: 10px 20px 15px;
   background: #131D29;
@@ -137,23 +143,24 @@
 }
 
 .container section .listof-section .data-status ul li a {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   box-shadow: 0px 1px 5px #000;
   position: relative;
   display: block;
   margin: 0 auto;
-  margin-bottom: 8px;
+  margin-bottom: 3px;
 }
 
 .container section .listof-section .data-status ul li span {
-  font-size: 13px;
+  font-size: 10px;
   color: #888DA4;
 }
 
 .container section .listof-section .data-status ul li {
-  margin-right: 14px;
+  margin-right: 6px;
+  flex: 1;
   text-align: center;
 }
 
@@ -207,18 +214,20 @@
       border: 2px solid white;
 }
 @media (max-width:1199px) {
-  .container section {
-    display: block;
-  }
-
   .container section .listof-section {
-    margin: 0 10px 30px;
-    width: 47%;
-    float: left;
+    margin-right: 2%;
+    width: 49%;
+    flex: none;
   }
-
+.container section .listof-section:nth-child(2n) {
+    margin-right: 0%;
+}
+.container section .listof-section:last-child {
+    margin-right: 2%;
+}
   .container section .listof-section .data-status ul li {
-    flex: 1;
+    -webkit-flex: 1 1;
+            flex: 1 1;
   }
 
   .condenast .condenast_header .condenast_header_label {
@@ -243,11 +252,7 @@
   }
 }
 
-@media(max-width: 1180px) {
-  .container section .listof-section {
-    width: 100%;
-  }
-
+@media(max-width: 767px) {
   .condenast .condenast_header .condenast_header_logo .img_logo {
     width: 150px;
     margin: 9px auto;
@@ -276,7 +281,7 @@
   }
 
   .condenast .condenast_header .condenast_header_label {
-    width: 44%;
+    width: 100%;
     float: none;
     margin: 0 auto;
   }
@@ -285,5 +290,16 @@
     width: 100%;
     text-align: center;
     padding: 17px;
+  }
+  .condenast .condenast_header{
+        padding: 0px 40px 20px;
+  }
+}
+@media(max-width:500px){
+  .container section{
+    padding:20px;
+  }
+  .condenast .condenast_header .condenast_header_logo .header_text{
+    font-size:30px;
   }
 }
